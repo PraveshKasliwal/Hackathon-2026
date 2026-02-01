@@ -1,0 +1,176 @@
+/* header */
+
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    border-bottom: 1px solid #e7f2f3;
+    background: white;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.search-input {
+    width: 260px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #cde3e6;
+}
+
+.add-btn {
+    background: #13daec;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.patient-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #e7f2f3;
+}
+
+.patient-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #e7f2f3;
+  transition: 
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.patient-card:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.patient-info{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    background: #e6f7f8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.info h3 {
+    margin: 0;
+}
+
+.relation {
+    font-size: 12px;
+    color: #4c939a;
+    display: inline-block;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    background-color: #e7f2f3;
+    color: #4c939a;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.status-container div{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #4c939a;
+    font-weight: 700;
+}
+
+.status {
+    margin-left: auto;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.status.success {
+    background: #e6f9f0;
+    color: #0f9d58;
+}
+
+.status.warning {
+    background: #fff4e5;
+    color: #f29900;
+}
+
+.status.danger {
+    background: #fdecea;
+    color: #d93025;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stats span {
+    font-size: 11px;
+    color: #6b9ea3;
+}
+
+.yellow {
+    color: #f29900;
+}
+
+.red {
+    color: #d93025;
+}
+
+.appointment span {
+    font-size: 11px;
+    color: #6b9ea3;
+}
+
+.add-member-card {
+    border: 2px dashed #cde3e6;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+}
+
+.add-member-card button {
+    margin-top: 16px;
+    background: #13daec;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
