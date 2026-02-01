@@ -4,9 +4,13 @@ import AddMember from "./Page/AddMember/AddMember";
 import Onboarding from "./Page/Onboarding/Onboarding";
 import MemberDetails from "./Page/Member/MemberDetails";
 import EditMember from "./Page/EditMember/EditMember";
+import OtpLogin from "./Page/OtpLogin/OtpLogin";
+
 function App() {
   return (
     <Routes>
+
+      <Route path="/login" element={<OtpLogin />} />
       <Route path="/" element={<Dashboard />} />
       <Route path="/member-detail" element={<MemberDetails />} />
       <Route path="/edit-member" element={<EditMember />} />

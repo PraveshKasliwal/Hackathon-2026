@@ -1,4 +1,5 @@
 import "./cstyles.css";
+import { Avatar } from "@mantine/core";
 import logoImg from "../assets/appLogo.jpeg";
 import { useNavigate } from "react-router-dom";
 
@@ -11,6 +12,9 @@ const Header = () => {
           <img src={logoImg} alt="" />
         </div>
         <span>Mera Care</span>
+      </div>
+      <div>
+        <Avatar onClick={() => navigate("/login")}/>
       </div>
     </header>
   );

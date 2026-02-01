@@ -132,7 +132,7 @@ const MemberDetails = () => {
                                 <div className="refill-button">
                                     Refill
                                 </div>
-                                <button className="primary small markastaken-btn">Mark as Taken</button>
+                                <button className="small markastaken-btn">Mark as taken</button>
                             </div>
                         </div>
 

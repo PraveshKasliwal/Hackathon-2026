@@ -102,7 +102,7 @@
     background: #dc2626;
     color: white;
     border: none;
-    font-size: 13px;
+    font-size: 12px;
     padding: 4px 10px;
     border-radius: 12px;
     font-weight: 700;
@@ -162,6 +162,16 @@
     padding: 4px 10px;
     border-radius: 12px;
     font-weight: 700;
+}
+
+.markastaken-btn{
+    background: #13daec;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 12px;
 }
 
 .secondary {
@@ -287,6 +297,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 10px;
 }
 
 .taken {

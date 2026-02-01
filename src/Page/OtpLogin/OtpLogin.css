@@ -1,0 +1,41 @@
+.otp-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f8f8;
+}
+
+.otp-card {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.otp-card input {
+  height: 48px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.primary {
+  background: #13daec;
+  color: white;
+  border: none;
+  height: 48px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.error-text {
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: -4px;
+}
