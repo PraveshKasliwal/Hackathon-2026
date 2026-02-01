@@ -1,7 +1,17 @@
+import { useState } from "react";
 import "../Page/AddMember/AddMember.css";
-import { MdDelete } from "react-icons/md";
 
 const MedicineCard = ({ onDelete }) => {
+  const [times, setTimes] = useState([]);
+
+  const toggleTime = (time) => {
+    if (times.includes(time)) {
+      setTimes(times.filter(t => t !== time));
+    } else {
+      setTimes([...times, time]);
+    }
+  };
+
   return (
     <div className="card">
       <div className="form-row">
@@ -10,19 +20,24 @@ const MedicineCard = ({ onDelete }) => {
         <input placeholder="Duration" />
       </div>
 
+      {/* TIME SELECTION */}
       <div className="time-row">
-        <span>Time:</span>
-        <button>Morning</button>
-        <button>Noon</button>
-        <button>Evening</button>
-        <button>Bedtime</button>
+        {["Morning", "Afternoon", "Night"].map((time) => (
+          <button
+            key={time}
+            className={`time-btn ${times.includes(time) ? "active" : ""}`}
+            onClick={() => toggleTime(time)}
+          >
+            {time}
+          </button>
+        ))}
       </div>
 
       <button className="delete" onClick={onDelete}>
-        <MdDelete color="red" style={{height: "24px", width: "24px"}} />
+        Delete Medicine
       </button>
     </div>
   );
-}
+};
 
 export default MedicineCard;

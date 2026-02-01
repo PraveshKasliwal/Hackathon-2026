@@ -129,7 +129,7 @@ const MemberDetails = () => {
                                     <MdSunny className="muted" />
                                     <MdDarkMode />
                                 </div>
-                                <div className="refill-button">
+                                <div className="refill-button" onClick={() => alert("Refill has been booked!")}>
                                     Refill
                                 </div>
                                 <button className="small markastaken-btn">Mark as taken</button>

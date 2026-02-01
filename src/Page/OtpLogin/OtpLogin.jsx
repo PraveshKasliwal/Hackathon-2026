@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import AppLogo from "../../assets/appLogo.jpeg";
 import "./OtpLogin.css";
 
 const OtpLogin = () => {
@@ -47,7 +48,10 @@ const OtpLogin = () => {
   return (
     <div className="otp-root">
       <div className="otp-card">
-        <h2>Login to MediCare</h2>
+        <div className="app-logo">
+            <img src={AppLogo} alt="" />
+        </div>
+        <h2>Login to Mera Care</h2>
 
         {step === 1 && (
           <>

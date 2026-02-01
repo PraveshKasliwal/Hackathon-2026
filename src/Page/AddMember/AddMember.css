@@ -32,7 +32,7 @@
   min-width: 240px;
 }
 
-.relationship-input-container{
+.relationship-input-container {
   display: flex;
   width: 49%;
 }
@@ -47,7 +47,7 @@ select {
   box-sizing: border-box;
 }
 
-.section-header-container{
+.section-header-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -94,7 +94,7 @@ select {
   flex: 1;
 } */
 
-.prescription-input{
+.prescription-input {
   display: flex;
   align-items: center;
   padding: 10px 0 0 14px;
@@ -122,4 +122,32 @@ select {
   border-radius: 14px;
   border: none;
   font-weight: 700;
+}
+
+/* TIME BUTTONS */
+.time-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.time-btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #f1f5f9;
+  color: #475569;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-btn:hover {
+  background: #e2e8f0;
+}
+
+/* SELECTED */
+.time-btn.active {
+  background: #13daec;
+  color: white;
 }
