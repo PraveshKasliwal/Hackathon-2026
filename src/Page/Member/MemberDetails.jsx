@@ -1,4 +1,5 @@
 import "./MemberDetails.css";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../../Components/Header";
 import {
@@ -21,6 +22,11 @@ import {
 
 const MemberDetails = () => {
     const navigate = useNavigate();
+    const [showShare, setShowShare] = useState(false);
+
+    // temp code (later from backend)
+    const inviteCode = "482913";
+
     return (
         <div className="member-root">
             {/* HEADER */}
@@ -31,20 +37,26 @@ const MemberDetails = () => {
                 {/* PROFILE HEADER */}
                 <section className="profile-card">
                     <div className="profile-info">
-                        <div className="avatar-large">JD</div>
+                        <div className="avatar-large">RS</div>
 
                         <div>
                             <div className="name-row">
-                                <h1>John Doe</h1>
+                                <h1>Rahul Sharma</h1>
                                 <span className="tag">Father</span>
                             </div>
-                            <p>🎂 65 years old</p>
+                            <p>50 years old</p>
                         </div>
                     </div>
 
                     <div className="profile-actions">
                         <button className="secondary edit-btn" onClick={() => navigate("/edit-member")}>
-                            <MdEdit /> Edit Member
+                            <MdEdit /> Edit
+                        </button>
+                        <button
+                            className="secondary share-btn"
+                            onClick={() => setShowShare(true)}
+                        >
+                            Share
                         </button>
                     </div>
                 </section>
@@ -92,7 +104,7 @@ const MemberDetails = () => {
                     <section>
                         <div className="section-header section-header-member-detail">
                             <h3>Medicines Schedule</h3>
-                            <button className="link-btn">View All →</button>
+                            {/* <button className="link-btn">View All →</button> */}
                         </div>
 
                         <div className="medicine-card">
@@ -117,7 +129,10 @@ const MemberDetails = () => {
                                     <MdSunny className="muted" />
                                     <MdDarkMode />
                                 </div>
-                                <button className="primary small">Mark as Taken</button>
+                                <div className="refill-button">
+                                    Refill
+                                </div>
+                                <button className="primary small markastaken-btn">Mark as Taken</button>
                             </div>
                         </div>
 
@@ -129,6 +144,7 @@ const MemberDetails = () => {
                                         <div>
                                             <h4>Metformin</h4>
                                             <p className="medicine-detail">500mg Capsule • Diabetes Management</p>
+                                            <p>This medicine has run out</p>
                                         </div>
                                     </div>
                                     <div className="med-bottom">
@@ -141,6 +157,9 @@ const MemberDetails = () => {
                                     <MdLightMode />
                                     <MdSunny />
                                     <MdDarkMode />
+                                </div>
+                                <div className="refill-button">
+                                    Refill
                                 </div>
                                 <div className="taken">
                                     <MdCheckCircle /> Taken at 8:15 AM
@@ -155,6 +174,7 @@ const MemberDetails = () => {
                                         <div>
                                             <h4>Paracetamol</h4>
                                             <p className="medicine-detail">250mg Capsule • Fever</p>
+                                            <p>Refill in: 10 days</p>
                                         </div>
                                     </div>
                                     <div className="med-bottom">
@@ -182,7 +202,7 @@ const MemberDetails = () => {
                     <section>
                         <div className="section-header section-header-member-detail">
                             <h3>Appointments</h3>
-                            <button className="link-btn">Schedule</button>
+                            {/* <button className="link-btn">Schedule</button> */}
                         </div>
 
                         <div className="appointment-card">
@@ -225,6 +245,29 @@ const MemberDetails = () => {
                     </section>
                 </div>
             </main>
+            {showShare && (
+                <div className="modal-overlay">
+                    <div className="modal">
+                        <h2>Share Access</h2>
+                        <p className="modal-subtitle">
+                            Share this 6-digit code with a family member to give access.
+                        </p>
+
+                        <div className="code-box">
+                            {inviteCode}
+                        </div>
+
+                        <div className="modal-actions">
+                            <button
+                                className="secondary"
+                                onClick={() => setShowShare(false)}
+                            >
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

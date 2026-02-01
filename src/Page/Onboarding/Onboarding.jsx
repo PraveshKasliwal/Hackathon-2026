@@ -115,7 +115,7 @@ const Onboarding = () => {
             </div>
 
             <div className="modal-actions">
-              <button className="primary-btn">Join Family</button>
+              <button className="primary-btn" onClick={() => navigate("/")}>Join Family</button>
               <button
                 className="secondary-btn"
                 onClick={() => setShowModal(false)}

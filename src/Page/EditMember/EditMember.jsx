@@ -184,7 +184,7 @@ const EditMember = () => {
 
       {/* ACTIONS */}
       <div className="actions">
-        <button className="cancel" onClick={() => navigate(-1)}>
+        <button className="cancel save" onClick={() => navigate(-1)}>
           Cancel
         </button>
         <button className="save" onClick={handleUpdate}>

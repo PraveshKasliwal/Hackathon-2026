@@ -11,13 +11,13 @@ const Dashboard = () => {
 
       <main className="dashboard">
         <div className="dashboard-header">
-          <h1>Patients Dashboard</h1>
+          <h1>Dashboard</h1>
           <p>Manage family healthcare reminders and appointments</p>
         </div>
 
         <div className="cards-grid">
           <PatientCard
-            name="Robert Smith"
+            name="Rahul Sharma"
             initials="RS"
             relation="Father"
             status="Needs Attention"
@@ -29,7 +29,7 @@ const Dashboard = () => {
           />
 
           <PatientCard
-            name="Mary Smith"
+            name="Neelam"
             initials="MS"
             relation="Mother"
             status="On Track"
@@ -41,9 +41,9 @@ const Dashboard = () => {
           />
 
           <PatientCard
-            name="James Wilson"
+            name="Shreyas"
             initials="JW"
-            relation="Grandfather"
+            relation="Brother"
             status="Alert Required"
             statusClass="danger"
             today={8}
